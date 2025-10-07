@@ -2,7 +2,7 @@
     Esta característica esta relacionada al registro de pacientes en la sala de urgencias respetando su nivel de
     prioridad y el horario de llegada.
 
-    Background:
+    Background:git
       Given Que la siguiente enfermera esta registrada:
       |Nombre|Apellido|
       |Maria |Lopez   |
@@ -116,13 +116,5 @@
       And no esta registrada
 
       Then registra los datos del paciente
-
-
-
-
-
-
-
-
 
 
