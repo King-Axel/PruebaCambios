@@ -1,11 +1,11 @@
 package org.example.domain;
 
 public class Enfermera {
-    private String nombre;
     private String apellido;
+    private String nombre;
 
-    public Enfermera(String nombre, String apellido) {
-        this.nombre = nombre;
+    public Enfermera(String apellido, String nombre) {
         this.apellido = apellido;
+        this.nombre = nombre;
     }
 }

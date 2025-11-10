@@ -1,19 +1,26 @@
 package org.example.domain;
 
 public enum NivelEmergencia {
-    CRITICA("Critica"),
-    EMERGENCIA("Emergencia"),
-    URGENCIA("Urgencia"),
-    URGENCIA_MENOR("Urgencia Menor"),
-    SIN_URGENCIA("Sin Urgencia");
+    CRITICA("Critica", 1),
+    EMERGENCIA("Emergencia", 2),
+    URGENCIA("Urgencia", 3),
+    URGENCIA_MENOR("Urgencia menor", 4),
+    SIN_URGENCIA("Sin Urgencia", 5),;
 
-    String nombre;
+    final String nombre;
+    int prioridad;
 
-    NivelEmergencia(String nombre) {
+    NivelEmergencia(String nombre, int prioridad) {
         this.nombre = nombre;
+        this.prioridad = prioridad;
     }
 
-    public boolean tieneNombre(String nombre) {
-        return this.nombre.equals(nombre);
+    public boolean esValido(String nombre) {
+        if (nombre == null) return false;
+        return nombre.equals(this.nombre);
+    }
+
+    public int getPrioridad() {
+        return prioridad;
     }
 }
